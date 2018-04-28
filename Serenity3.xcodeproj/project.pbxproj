@@ -14,6 +14,8 @@
 		B35CFBEF2094A87B009C3D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35CFBED2094A87B009C3D6C /* LaunchScreen.storyboard */; };
 		B35CFBF72094A8B2009C3D6C /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = B35CFBF62094A8B2009C3D6C /* cities.json */; };
 		B35CFC192094B339009C3D6C /* locationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CFC182094B339009C3D6C /* locationTableViewCell.swift */; };
+		B35CFC1E2094BEFE009C3D6C /* avenirnext-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B35CFC1C2094BEFE009C3D6C /* avenirnext-bold.ttf */; };
+		B35CFC1F2094BEFE009C3D6C /* avenirnext-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B35CFC1D2094BEFE009C3D6C /* avenirnext-medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B35CFBF02094A87B009C3D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35CFBF62094A8B2009C3D6C /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		B35CFC182094B339009C3D6C /* locationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationTableViewCell.swift; sourceTree = "<group>"; };
+		B35CFC1C2094BEFE009C3D6C /* avenirnext-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "avenirnext-bold.ttf"; sourceTree = "<group>"; };
+		B35CFC1D2094BEFE009C3D6C /* avenirnext-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "avenirnext-medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,7 @@
 		B35CFBE32094A87B009C3D6C /* Serenity3 */ = {
 			isa = PBXGroup;
 			children = (
-				B35CFC1A2094BED4009C3D6C /* New Group */,
+				B35CFC1B2094BEEC009C3D6C /* fonts */,
 				B35CFBE42094A87B009C3D6C /* AppDelegate.swift */,
 				B35CFBE62094A87B009C3D6C /* ViewController.swift */,
 				B35CFBE82094A87B009C3D6C /* Main.storyboard */,
@@ -71,11 +75,13 @@
 			path = Serenity3;
 			sourceTree = "<group>";
 		};
-		B35CFC1A2094BED4009C3D6C /* New Group */ = {
+		B35CFC1B2094BEEC009C3D6C /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B35CFC1C2094BEFE009C3D6C /* avenirnext-bold.ttf */,
+				B35CFC1D2094BEFE009C3D6C /* avenirnext-medium.ttf */,
 			);
-			path = "New Group";
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +145,10 @@
 			files = (
 				B35CFBF72094A8B2009C3D6C /* cities.json in Resources */,
 				B35CFBEF2094A87B009C3D6C /* LaunchScreen.storyboard in Resources */,
+				B35CFC1E2094BEFE009C3D6C /* avenirnext-bold.ttf in Resources */,
 				B35CFBEC2094A87B009C3D6C /* Assets.xcassets in Resources */,
 				B35CFBEA2094A87B009C3D6C /* Main.storyboard in Resources */,
+				B35CFC1F2094BEFE009C3D6C /* avenirnext-medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
