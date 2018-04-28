@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="208" id="XUw-Pt-Bcc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="208" id="XUw-Pt-Bcc" customClass="locationTableViewCell" customModule="Serenity3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="208"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XUw-Pt-Bcc" id="Blc-fK-Ib9">
@@ -41,7 +41,7 @@
                                                     <rect key="frame" x="15" y="11" width="345" height="186"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opi-qq-hbh">
-                                                    <rect key="frame" x="30" y="166" width="42" height="21"/>
+                                                    <rect key="frame" x="15" y="166" width="57" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -50,6 +50,7 @@
                                             <constraints>
                                                 <constraint firstItem="nUD-yl-X7k" firstAttribute="leading" secondItem="Blc-fK-Ib9" secondAttribute="leading" constant="20" id="1c6-q5-63w"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="leading" secondItem="opi-qq-hbh" secondAttribute="trailing" constant="-57" id="2zt-Pt-BJ4"/>
+                                                <constraint firstItem="opi-qq-hbh" firstAttribute="leading" secondItem="3WT-oo-itq" secondAttribute="leading" id="561-VX-vj4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3WT-oo-itq" secondAttribute="bottom" id="AQx-PE-9GJ"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="centerY" secondItem="Blc-fK-Ib9" secondAttribute="centerY" id="LFb-XP-J1n"/>
                                                 <constraint firstItem="nUD-yl-X7k" firstAttribute="centerX" secondItem="Blc-fK-Ib9" secondAttribute="centerX" id="MMe-yp-Vos"/>
@@ -62,6 +63,10 @@
                                                 <constraint firstItem="nUD-yl-X7k" firstAttribute="centerY" secondItem="Blc-fK-Ib9" secondAttribute="centerY" id="q1p-hQ-tLg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationImage" destination="3WT-oo-itq" id="K03-WZ-BtJ"/>
+                                            <outlet property="locationName" destination="opi-qq-hbh" id="baI-yh-7JH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -79,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="475.5" y="133.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aQF-6n-c0e">

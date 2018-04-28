@@ -13,6 +13,7 @@
 		B35CFBEC2094A87B009C3D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35CFBEB2094A87B009C3D6C /* Assets.xcassets */; };
 		B35CFBEF2094A87B009C3D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35CFBED2094A87B009C3D6C /* LaunchScreen.storyboard */; };
 		B35CFBF72094A8B2009C3D6C /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = B35CFBF62094A8B2009C3D6C /* cities.json */; };
+		B35CFC192094B339009C3D6C /* locationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CFC182094B339009C3D6C /* locationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B35CFBEE2094A87B009C3D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B35CFBF02094A87B009C3D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35CFBF62094A8B2009C3D6C /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		B35CFC182094B339009C3D6C /* locationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B35CFBE42094A87B009C3D6C /* AppDelegate.swift */,
 				B35CFBE62094A87B009C3D6C /* ViewController.swift */,
 				B35CFBE82094A87B009C3D6C /* Main.storyboard */,
+				B35CFC182094B339009C3D6C /* locationTableViewCell.swift */,
 				B35CFBEB2094A87B009C3D6C /* Assets.xcassets */,
 				B35CFBED2094A87B009C3D6C /* LaunchScreen.storyboard */,
 				B35CFBF02094A87B009C3D6C /* Info.plist */,
@@ -142,6 +145,7 @@
 			files = (
 				B35CFBE72094A87B009C3D6C /* ViewController.swift in Sources */,
 				B35CFBE52094A87B009C3D6C /* AppDelegate.swift in Sources */,
+				B35CFC192094B339009C3D6C /* locationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
