@@ -81,6 +81,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Serenity" id="X0F-N6-ccY"/>
+                    <connections>
+                        <outlet property="locationTable" destination="L3s-FJ-x1V" id="Te9-vF-1Be"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

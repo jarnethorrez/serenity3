@@ -12,4 +12,6 @@ class locationTableViewCell: UITableViewCell {
     
     @IBOutlet var locationImage: UIImageView!
     @IBOutlet var locationName: UILabel!
+    
+    
 }
