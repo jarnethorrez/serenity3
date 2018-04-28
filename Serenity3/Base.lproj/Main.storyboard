@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Serenity-->
         <scene sceneID="tne-QT-ifu">
@@ -41,24 +46,26 @@
                                                     <rect key="frame" x="15" y="11" width="345" height="186"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opi-qq-hbh">
-                                                    <rect key="frame" x="24" y="166" width="317" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="30" y="161" width="315" height="38.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="315" id="80e-rz-LP5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="opi-qq-hbh" firstAttribute="centerX" secondItem="3WT-oo-itq" secondAttribute="centerX" id="10I-dA-6s3"/>
                                                 <constraint firstItem="nUD-yl-X7k" firstAttribute="leading" secondItem="Blc-fK-Ib9" secondAttribute="leading" constant="20" id="1c6-q5-63w"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3WT-oo-itq" secondAttribute="bottom" id="AQx-PE-9GJ"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="centerY" secondItem="Blc-fK-Ib9" secondAttribute="centerY" id="LFb-XP-J1n"/>
+                                                <constraint firstItem="opi-qq-hbh" firstAttribute="top" secondItem="3WT-oo-itq" secondAttribute="top" constant="150" id="M64-he-FxE"/>
                                                 <constraint firstItem="nUD-yl-X7k" firstAttribute="centerX" secondItem="Blc-fK-Ib9" secondAttribute="centerX" id="MMe-yp-Vos"/>
-                                                <constraint firstItem="opi-qq-hbh" firstAttribute="leading" secondItem="Blc-fK-Ib9" secondAttribute="leadingMargin" constant="9" id="SJe-6O-AG4"/>
-                                                <constraint firstItem="opi-qq-hbh" firstAttribute="top" secondItem="3WT-oo-itq" secondAttribute="bottom" constant="-31" id="UV7-6S-Z9F"/>
                                                 <constraint firstAttribute="trailing" secondItem="nUD-yl-X7k" secondAttribute="trailing" constant="20" id="W6g-QY-T02"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="top" secondItem="Blc-fK-Ib9" secondAttribute="topMargin" id="YTe-kW-prQ"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="centerX" secondItem="Blc-fK-Ib9" secondAttribute="centerX" id="bTT-WJ-0cG"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="leading" secondItem="Blc-fK-Ib9" secondAttribute="leadingMargin" id="bcp-gc-vxK"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="opi-qq-hbh" secondAttribute="trailing" constant="19" id="flW-bN-HEQ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3WT-oo-itq" secondAttribute="trailing" id="i1m-OH-duD"/>
                                                 <constraint firstItem="nUD-yl-X7k" firstAttribute="centerY" secondItem="Blc-fK-Ib9" secondAttribute="centerY" id="q1p-hQ-tLg"/>
                                             </constraints>
@@ -97,6 +104,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gtw-50-tAy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

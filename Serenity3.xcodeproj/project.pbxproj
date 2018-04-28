@@ -59,6 +59,7 @@
 		B35CFBE32094A87B009C3D6C /* Serenity3 */ = {
 			isa = PBXGroup;
 			children = (
+				B35CFC1A2094BED4009C3D6C /* New Group */,
 				B35CFBE42094A87B009C3D6C /* AppDelegate.swift */,
 				B35CFBE62094A87B009C3D6C /* ViewController.swift */,
 				B35CFBE82094A87B009C3D6C /* Main.storyboard */,
@@ -68,6 +69,13 @@
 				B35CFBF02094A87B009C3D6C /* Info.plist */,
 			);
 			path = Serenity3;
+			sourceTree = "<group>";
+		};
+		B35CFC1A2094BED4009C3D6C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
