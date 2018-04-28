@@ -61,8 +61,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = locationTable.dequeueReusableCell(withIdentifier: "locationCell") as! locationTableViewCell
         
-        print("yow")
-        
         cell.locationImage.image = UIImage(named: "\(indexPath.row)")
         cell.locationName.text = cities["\(indexPath.row)"]?.naam
         return cell
