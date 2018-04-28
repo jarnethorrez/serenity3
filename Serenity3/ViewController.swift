@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,9 +32,9 @@ class ViewController: UIViewController {
         
         do {
             let data = try Data(contentsOf: url)
-            let cities = try JSONDecoder().decode([String: city].self, from: data)
+            let citiesLocal = try JSONDecoder().decode([String: city].self, from: data)
             
-            print(cities["1"]!.naam)
+            print(citiesLocal["1"]!)
             
         } catch {
             print(error)
