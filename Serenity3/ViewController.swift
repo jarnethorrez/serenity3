@@ -8,19 +8,20 @@
 
 import UIKit
 
+struct city:Decodable {
+    let naam: String
+    let locatie: String
+    let adres: String
+    let stad: String
+    let over: String
+}
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var locationTable: UITableView!
     
-    struct city:Decodable {
-        let naam: String
-        let locatie: String
-        let adres: String
-        let stad: String
-        let over: String
-    }
-    
     var cities: [String: city] = [:]
+    var selectedIndex = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.locationImage.image = UIImage(named: "\(indexPath.row)")
         cell.locationName.text = cities["\(indexPath.row)"]?.naam
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailSegue", sender: self)
+        selectedIndex = indexPath.row
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailSegue" {
+            
+            let detailVC = segue.destination as!  DetailViewController
+            
+            detailVC.selectedCity = cities["\(selectedIndex)"]!
+            detailVC.id = selectedIndex
+        }
     }
 
 
