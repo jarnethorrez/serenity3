@@ -20,20 +20,37 @@ class DetailViewController: UIViewController {
     @IBOutlet var locationAbout: UILabel!
     @IBOutlet var locationImage: UIImageView!
     
+    @IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.backBarButtonItem?.title = "Back"
-        print(selectedCity!);
+//        print(selectedCity!);
         
+        locationImage.image = UIImage(named: "0_big")
         locationName.text = selectedCity!.naam
         location.text = selectedCity!.locatie
         locationAdres.text = selectedCity!.adres
         locationCity.text = selectedCity!.stad
+        
+        locationAbout.sizeToFit()
         locationAbout.text = selectedCity!.over
-        locationImage.image = UIImage(named: "\(id)_big")
         
+    }
+    
+    override func viewDidLayoutSubviews() {
         
+        var contentRect = CGRect.zero
+        
+        print("subviews")
+        for view in scrollView.subviews {
+            print(view.frame)
+            contentRect = contentRect.union(view.frame)
+        }
+        scrollView.contentSize = contentRect.size
+        
+        print("content size")
+        print(scrollView.contentSize)
     }
 
     override func didReceiveMemoryWarning() {
