@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 print("Problem with the data received from geocoder")
             }
         })
-            
+        
 //        print(locations)
     }
     

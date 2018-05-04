@@ -41,7 +41,10 @@
                                                     <rect key="frame" x="15" y="11" width="384" height="186"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opi-qq-hbh">
-                                                    <rect key="frame" x="171.66666666666666" y="138" width="71" height="39"/>
+                                                    <rect key="frame" x="40" y="138" width="335" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="4M8-bI-q7E"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -50,12 +53,12 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3WT-oo-itq" secondAttribute="bottom" id="AQx-PE-9GJ"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="centerY" secondItem="Blc-fK-Ib9" secondAttribute="centerY" id="LFb-XP-J1n"/>
-                                                <constraint firstItem="opi-qq-hbh" firstAttribute="bottom" secondItem="3WT-oo-itq" secondAttribute="bottom" constant="-20" id="Sge-Cd-F1g"/>
+                                                <constraint firstItem="opi-qq-hbh" firstAttribute="leading" secondItem="3WT-oo-itq" secondAttribute="trailing" constant="-359" id="Xft-tJ-Vnb"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="top" secondItem="Blc-fK-Ib9" secondAttribute="topMargin" id="YTe-kW-prQ"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="centerX" secondItem="Blc-fK-Ib9" secondAttribute="centerX" id="bTT-WJ-0cG"/>
                                                 <constraint firstItem="3WT-oo-itq" firstAttribute="leading" secondItem="Blc-fK-Ib9" secondAttribute="leadingMargin" id="bcp-gc-vxK"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3WT-oo-itq" secondAttribute="trailing" id="i1m-OH-duD"/>
-                                                <constraint firstItem="opi-qq-hbh" firstAttribute="centerX" secondItem="Blc-fK-Ib9" secondAttribute="centerX" id="vEs-O4-cB5"/>
+                                                <constraint firstItem="opi-qq-hbh" firstAttribute="top" secondItem="3WT-oo-itq" secondAttribute="bottom" constant="-59" id="mPf-fl-jgr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
