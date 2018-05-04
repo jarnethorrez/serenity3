@@ -20,6 +20,8 @@ struct city:Decodable {
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var locationTable: UITableView!
+    @IBOutlet var locationLabel: UILabel!
+    
     
     var cities: [String: city] = [:]
     var selectedIndex = 0;
@@ -64,7 +66,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func displayLocationInfo(_ placemark: CLPlacemark?) {
-        print(placemark?.locality!);
+        let location = "\(placemark!.locality!), \(placemark!.country!)"
+        
+        locationLabel.text = location
+        
     }
     
     func loadJson() {

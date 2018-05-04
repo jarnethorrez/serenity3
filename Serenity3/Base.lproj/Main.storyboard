@@ -41,7 +41,7 @@
                                                     <rect key="frame" x="15" y="11" width="384" height="186"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opi-qq-hbh">
-                                                    <rect key="frame" x="172" y="138" width="71" height="39"/>
+                                                    <rect key="frame" x="171.66666666666666" y="138" width="71" height="39"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -66,19 +66,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing places in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-uO-iss">
-                                <rect key="frame" x="28" y="84" width="141" height="23"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-PD-6S0">
+                                <rect key="frame" x="20" y="122" width="8" height="12"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kortrijk, Belgium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-27-3iJ">
+                                <rect key="frame" x="38" y="116.99999999999999" width="140" height="23.333333333333329"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="locationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-PD-6S0">
-                                <rect key="frame" x="28" y="115" width="8" height="12"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kortrijk, Belgium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-27-3iJ">
-                                <rect key="frame" x="59" y="111" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing places in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-uO-iss">
+                                <rect key="frame" x="20" y="84" width="141" height="23"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,18 +86,22 @@
                         <constraints>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2Xd-jB-wel"/>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7wp-fp-JUT"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kgz-uO-iss" secondAttribute="trailing" constant="20" symbolic="YES" id="Irz-PR-ITV"/>
+                            <constraint firstItem="Kgz-uO-iss" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IXm-vh-KOe"/>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P6X-ta-npW"/>
-                            <constraint firstItem="dV9-PD-6S0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="QaB-BM-hOn"/>
-                            <constraint firstItem="Kgz-uO-iss" firstAttribute="leading" secondItem="dV9-PD-6S0" secondAttribute="trailing" constant="20" id="XeP-GU-fwm"/>
-                            <constraint firstItem="dV9-PD-6S0" firstAttribute="leading" secondItem="L3s-FJ-x1V" secondAttribute="leading" id="c9k-6H-STk"/>
-                            <constraint firstItem="Kgz-uO-iss" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="n1j-JZ-cHt"/>
+                            <constraint firstItem="dV9-PD-6S0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QVK-1t-vy5"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kgz-uO-iss" secondAttribute="trailing" constant="20" symbolic="YES" id="TbI-2D-b8q"/>
+                            <constraint firstItem="h3g-27-3iJ" firstAttribute="leading" secondItem="dV9-PD-6S0" secondAttribute="trailing" constant="10" id="YYR-PY-2CT"/>
+                            <constraint firstItem="Kgz-uO-iss" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gna-z9-4rF"/>
+                            <constraint firstItem="h3g-27-3iJ" firstAttribute="top" secondItem="Kgz-uO-iss" secondAttribute="bottom" constant="10" id="k2B-yu-JBu"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h3g-27-3iJ" secondAttribute="trailing" constant="20" symbolic="YES" id="mwG-r8-o1X"/>
+                            <constraint firstItem="dV9-PD-6S0" firstAttribute="top" secondItem="Kgz-uO-iss" secondAttribute="bottom" constant="15" id="tnd-SJ-JOe"/>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xbL-i5-C68"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Serenity" id="X0F-N6-ccY"/>
                     <connections>
+                        <outlet property="locationLabel" destination="h3g-27-3iJ" id="21i-of-bgF"/>
                         <outlet property="locationTable" destination="L3s-FJ-x1V" id="Te9-vF-1Be"/>
                     </connections>
                 </viewController>
