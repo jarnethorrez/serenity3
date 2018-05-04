@@ -26,8 +26,6 @@ class DetailViewController: UIViewController {
 
         self.navigationItem.backBarButtonItem?.title = "Back"
         
-        print("\(String(describing: id!))_big")
-        
         locationImage.image = UIImage(named: "\(String(describing: id!))_big")
         locationName.text = selectedCity!.naam
         location.text = selectedCity!.locatie
@@ -38,6 +36,18 @@ class DetailViewController: UIViewController {
         locationAbout.text = selectedCity!.over
         
     }
+    
+    override func viewDidLayoutSubviews() {
+        
+        var contentRect = CGRect.zero
+        
+        for view in scrollView.subviews {
+            contentRect = contentRect.union(view.frame)
+        }
+        
+        scrollView.contentSize = contentRect.size
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

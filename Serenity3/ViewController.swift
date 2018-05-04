@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 struct city:Decodable {
     let naam: String
@@ -16,12 +17,14 @@ struct city:Decodable {
     let over: String
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var locationTable: UITableView!
     
     var cities: [String: city] = [:]
     var selectedIndex = 0;
+    let locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         loadJson()
         locationTable.delegate = self
         locationTable.dataSource = self
+        
+        self.getUserLocation()
+    }
+    
+    func getUserLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
+            
+            if (error != nil) {
+                print("Reverse geocoder failed with error" + (error?.localizedDescription)!)
+                return
+            }
+            
+            if (placemarks?.count)! > 0 {
+                let pm = placemarks?[0]
+                self.displayLocationInfo(pm)
+            } else {
+                print("Problem with the data received from geocoder")
+            }
+        })
+            
+//        print(locations)
+    }
+    
+    func displayLocationInfo(_ placemark: CLPlacemark?) {
+        print(placemark?.locality!);
     }
     
     func loadJson() {

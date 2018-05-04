@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L3s-FJ-x1V">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="164" width="414" height="572"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" rowHeight="208" id="XUw-Pt-Bcc" customClass="locationTableViewCell" customModule="Serenity3" customModuleProvider="target">
@@ -41,7 +41,7 @@
                                                     <rect key="frame" x="15" y="11" width="384" height="186"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opi-qq-hbh">
-                                                    <rect key="frame" x="171.66666666666666" y="138" width="71" height="39"/>
+                                                    <rect key="frame" x="172" y="138" width="71" height="39"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -66,12 +66,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Showing places in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-uO-iss">
+                                <rect key="frame" x="28" y="84" width="141" height="23"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="locationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-PD-6S0">
+                                <rect key="frame" x="28" y="115" width="8" height="12"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kortrijk, Belgium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-27-3iJ">
+                                <rect key="frame" x="59" y="111" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2Xd-jB-wel"/>
-                            <constraint firstItem="L3s-FJ-x1V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7wp-fp-JUT"/>
+                            <constraint firstItem="L3s-FJ-x1V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7wp-fp-JUT"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kgz-uO-iss" secondAttribute="trailing" constant="20" symbolic="YES" id="Irz-PR-ITV"/>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P6X-ta-npW"/>
+                            <constraint firstItem="dV9-PD-6S0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="QaB-BM-hOn"/>
+                            <constraint firstItem="Kgz-uO-iss" firstAttribute="leading" secondItem="dV9-PD-6S0" secondAttribute="trailing" constant="20" id="XeP-GU-fwm"/>
+                            <constraint firstItem="dV9-PD-6S0" firstAttribute="leading" secondItem="L3s-FJ-x1V" secondAttribute="leading" id="c9k-6H-STk"/>
+                            <constraint firstItem="Kgz-uO-iss" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="n1j-JZ-cHt"/>
                             <constraint firstItem="L3s-FJ-x1V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xbL-i5-C68"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="-269"/>
+            <point key="canvasLocation" x="437.68115942028987" y="-269.02173913043481"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aQF-6n-c0e">
@@ -190,9 +211,9 @@
                                                     <constraint firstItem="V62-WA-t6G" firstAttribute="leading" secondItem="6uW-jF-6QY" secondAttribute="trailing" constant="20" id="nGI-ow-thi"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3y-L9-2qb">
-                                                <rect key="frame" x="184.66666666666666" y="470" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3y-L9-2qb">
+                                                <rect key="frame" x="39.666666666666657" y="470" width="335" height="50"/>
+                                                <state key="normal" image="btn"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locatie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3As-aH-Cf0">
                                                 <rect key="frame" x="20" y="228" width="59" height="23.333333333333343"/>
@@ -272,6 +293,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn" width="335" height="50"/>
         <image name="locationIcon" width="8" height="12"/>
     </resources>
 </document>

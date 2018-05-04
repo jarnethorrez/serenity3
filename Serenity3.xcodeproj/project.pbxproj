@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B306FD11209C8342002CECA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B306FD10209C8342002CECA8 /* CoreLocation.framework */; };
 		B35CFBE52094A87B009C3D6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CFBE42094A87B009C3D6C /* AppDelegate.swift */; };
 		B35CFBE72094A87B009C3D6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CFBE62094A87B009C3D6C /* ViewController.swift */; };
 		B35CFBEA2094A87B009C3D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35CFBE82094A87B009C3D6C /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B306FD10209C8342002CECA8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B35CFBE12094A87B009C3D6C /* Serenity3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Serenity3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35CFBE42094A87B009C3D6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B35CFBE62094A87B009C3D6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,18 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B306FD11209C8342002CECA8 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B306FD0F209C8342002CECA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B306FD10209C8342002CECA8 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B35CFBD82094A87B009C3D6C = {
 			isa = PBXGroup;
 			children = (
 				B35CFBE32094A87B009C3D6C /* Serenity3 */,
 				B35CFBE22094A87B009C3D6C /* Products */,
 				B35CFBF62094A8B2009C3D6C /* cities.json */,
+				B306FD0F209C8342002CECA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
