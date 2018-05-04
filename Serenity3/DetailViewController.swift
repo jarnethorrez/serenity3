@@ -25,9 +25,10 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.backBarButtonItem?.title = "Back"
-//        print(selectedCity!);
         
-        locationImage.image = UIImage(named: "0_big")
+        print("\(String(describing: id!))_big")
+        
+        locationImage.image = UIImage(named: "\(String(describing: id!))_big")
         locationName.text = selectedCity!.naam
         location.text = selectedCity!.locatie
         locationAdres.text = selectedCity!.adres
@@ -37,22 +38,6 @@ class DetailViewController: UIViewController {
         locationAbout.text = selectedCity!.over
         
     }
-    
-    override func viewDidLayoutSubviews() {
-        
-        var contentRect = CGRect.zero
-        
-        print("subviews")
-        for view in scrollView.subviews {
-            print(view.frame)
-            contentRect = contentRect.union(view.frame)
-        }
-        scrollView.contentSize = contentRect.size
-        
-        print("content size")
-        print(scrollView.contentSize)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -71,9 +71,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if segue.identifier == "toDetailSegue" {
             
             let detailVC = segue.destination as!  DetailViewController
-            
+            selectedIndex = (locationTable.indexPathForSelectedRow?.row)!
             detailVC.selectedCity = cities["\(selectedIndex)"]!
-            detailVC.id = selectedIndex
+            detailVC.id = locationTable.indexPathForSelectedRow?.row
         }
     }
 
