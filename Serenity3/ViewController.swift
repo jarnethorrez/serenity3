@@ -14,7 +14,10 @@ struct city:Decodable {
     let locatie: String
     let adres: String
     let stad: String
+    let postcode: String
     let over: String
+    let lat: String
+    let long: String
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
@@ -62,7 +65,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         })
         
-//        print(locations)
     }
     
     func displayLocationInfo(_ placemark: CLPlacemark?) {

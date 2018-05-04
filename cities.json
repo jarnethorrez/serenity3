@@ -3,14 +3,41 @@
         "naam": "De Rozentuin",
         "locatie": "Kasteel t Hoge",
         "adres": "Doorniksesteenweg 218",
-        "stad": "8500 Kortrijk",
-        "over": "De rozentuin ligt midden in het historische groen van het kasteelpark 't Hoge. Dit park van ruim 3 ha is meer dan 175 jaar oud en bevat meerdere merkwaardige bomen. In 1959 werd een deel van het park ingericht als rosarium. De rozentuin omvat een proeftuin, waar jaarlijks meer dan honderd nieuwe rozencreaties van Europese selectiehuizen worden geplant. Verder is er een demonstratietuin met rozenvariëteiten die momenteel goed presteren, en een historische tuin die een beeld geeft van de evolutie van de roos door de eeuwen heen."
+        "stad": "kortrijk",
+        "postcode": "8500",
+        "over": "De rozentuin ligt midden in het historische groen van het kasteelpark 't Hoge. Dit park van ruim 3 ha is meer dan 175 jaar oud en bevat meerdere merkwaardige bomen. In 1959 werd een deel van het park ingericht als rosarium. De rozentuin omvat een proeftuin, waar jaarlijks meer dan honderd nieuwe rozencreaties van Europese selectiehuizen worden geplant. Verder is er een demonstratietuin met rozenvariëteiten die momenteel goed presteren, en een historische tuin die een beeld geeft van de evolutie van de roos door de eeuwen heen.",
+        "lat": "50.8042668",
+        "long": "3.2808137"
     },
     "1": {
         "naam": "Het Buda Park",
         "locatie": "Budapark",
         "adres": "IJzerkaai",
-        "stad": "8500 Kortrijk",
-        "over": "Het Budapark past in de volledige heraanleg van de Leie en de Leieboorden. Jong en oud kunnen hier relaxen in het mooie kader van de Leie. In de maanden juli en augustus wordt het Budapark omgetoverd tot een strand met ligweide en bar, waardoor inwoners en toeristen maximaal kunnen genieten van het zonnetje. Omwille van de gevaarlijke onderstroom mag er wel niet gezwommen worden in de Leie."
-    }
+        "stad": "kortrijk",
+        "postcode": "8500",
+        "over": "Het Budapark past in de volledige heraanleg van de Leie en de Leieboorden. Jong en oud kunnen hier relaxen in het mooie kader van de Leie. In de maanden juli en augustus wordt het Budapark omgetoverd tot een strand met ligweide en bar, waardoor inwoners en toeristen maximaal kunnen genieten van het zonnetje. Omwille van de gevaarlijke onderstroom mag er wel niet gezwommen worden in de Leie.",
+        "lat": "50.8328507",
+        "long": "3.2671818"
+    },
+    "2": {
+        "naam": "Het Koning Albertpark",
+        "locatie": "Koning Albertpark",
+        "adres": "Koning Albertpark",
+        "stad": "kortrijk",
+        "postcode": "8500",
+        "over": "Het Koning Albertpark heette oorspronkelijk het Leiepark. Het werd in 1905 aangelegd op een gedempte Leiebocht. Het Leiepark werd in 1935 omgedoopt tot het Albertpark, en in 1968 tot het Koning Albertpark. Dit open stadspark van twee hectare omzoomt het kruispunt van de belangrijke Kortrijkse waterwegen. De twee Leiearmen en het kanaal Bossuit-Kortrijk komen hier samen. Zo splitst het water het park in vier, door bruggen verbonden delen. In het kader van de Leiewerken werd het park volledig heraangelegd, uitgebreid en geïntegreerd in de prachtige nieuwe omgeving van de Leieboorden.",
+        "lat": "50.8348909",
+        "long": "3.267606"
+    },
+    "3": {
+        "naam": "Het Plein",
+        "locatie": "Plein",
+        "adres": "Plein",
+        "stad": "kortrijk",
+        "postcode": "8500",
+        "over": "Het Plein heeft een militair verleden. Halfweg de 17de eeuw werd hier een citadel gebouwd met kazernes. Te midden van de militaire gebouwen lag een oefenterrein, het huidige Plein. De militaire gebouwen werden gesloopt, bomen werden geplant en in 1879 werd het Plein een openbaar park. In 2002 werd het park gerenoveerd naar een ontwerp van het bureau Wirtz. De kaprijke bomen werden gerooid en ruimden plaats voor loofgangen met wandelpaden in dolomiet. De fonteinen geven het park een frisse toets. Centraal vind je tussen zittribunes een podium. Karakteristiek voor het park zijn de monumentale platanen, linden en wilde kastanjes",
+        "lat": "50.8301371",
+        "long": "3.2711068"
+    },
+    
 }

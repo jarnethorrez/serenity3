@@ -29,11 +29,11 @@ class DetailViewController: UIViewController {
         locationImage.image = UIImage(named: "\(String(describing: id!))_big")
         locationName.text = selectedCity!.naam
         location.text = selectedCity!.locatie
-        locationAdres.text = selectedCity!.adres
-        locationCity.text = selectedCity!.stad
+        locationAdres.text = "\(selectedCity!.postcode) \(selectedCity!.stad)"
+        locationCity.text = selectedCity!.adres
         
-        locationAbout.sizeToFit()
         locationAbout.text = selectedCity!.over
+        locationAbout.sizeToFit()
         
     }
     
