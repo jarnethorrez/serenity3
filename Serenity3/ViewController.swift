@@ -11,6 +11,7 @@ import CoreLocation
 
 struct city:Decodable {
     let naam: String
+    let imageId: String
     let locatie: String
     let adres: String
     let stad: String
@@ -91,12 +92,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             cities.forEach {
                 city in
-                if (city.value.stad == "kortrijk") {
+                if (city.value.stad == "Gent") {
                     filteredCities[city.key] = city.value
                 }
             }
             
-            print(filteredCities.count)
+            cities = filteredCities
+            locationTable.reloadData()
         } catch {
             print(error)
         }
@@ -119,8 +121,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = locationTable.dequeueReusableCell(withIdentifier: "locationCell") as! locationTableViewCell
         
-        cell.locationImage.image = UIImage(named: "\(indexPath.row)")
-        cell.locationName.text = cities["\(indexPath.row)"]?.naam
+        var cityKeys = [Int]();
+        
+        cities.forEach {
+            city in
+            cityKeys.append( Int(city.key)! )
+        }
+        
+        print(cityKeys[indexPath.row])
+        
+        cell.locationImage.image = UIImage(named: "\(cityKeys[indexPath.row])")
+        cell.locationName.text = cities["\(cityKeys[indexPath.row])"]?.naam
         return cell
     }
     

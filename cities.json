@@ -1,6 +1,7 @@
 {
     "0": {
         "naam": "De Rozentuin",
+        "imageId": "0",
         "locatie": "Kasteel t Hoge",
         "adres": "Doorniksesteenweg 218",
         "stad": "kortrijk",
@@ -11,6 +12,7 @@
     },
     "1": {
         "naam": "Het Buda Park",
+        "imageId": "1",
         "locatie": "Budapark",
         "adres": "IJzerkaai",
         "stad": "kortrijk",
@@ -21,6 +23,7 @@
     },
     "2": {
         "naam": "Het Koning Albertpark",
+        "imageId": "2",
         "locatie": "Koning Albertpark",
         "adres": "Koning Albertpark",
         "stad": "kortrijk",
@@ -31,6 +34,7 @@
     },
     "3": {
         "naam": "Het Plein",
+        "imageId": "3",
         "locatie": "Plein",
         "adres": "Plein",
         "stad": "kortrijk",
@@ -42,6 +46,7 @@
     
     "4": {
         "naam": "Citadel Park",
+        "imageId": "4",
         "locatie": "Citadelpark",
         "adres": "Citadelpark",
         "stad": "Gent",
