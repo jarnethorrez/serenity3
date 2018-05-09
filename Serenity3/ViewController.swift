@@ -138,9 +138,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailSegue" {
             
+            var cityKeys = [Int]();
+            
+            cities.forEach {
+                city in
+                cityKeys.append( Int(city.key)! )
+            }
+            
             let detailVC = segue.destination as!  DetailViewController
             selectedIndex = (locationTable.indexPathForSelectedRow?.row)!
-            detailVC.selectedCity = cities["\(selectedIndex)"]!
+            detailVC.selectedCity = cities["\(cityKeys[selectedIndex])"]!
             detailVC.id = locationTable.indexPathForSelectedRow?.row
         }
     }
