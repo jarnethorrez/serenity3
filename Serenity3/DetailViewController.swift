@@ -53,7 +53,22 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func openInMapsTapped(_ sender: Any) {
+        
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+        if segue.identifier == "toMap" {
+            
+            let mapVC = segue.destination as!  MapViewController
+            mapVC.latitude = (selectedCity?.lat)!
+            mapVC.longitude = (selectedCity?.long)!
+            mapVC.locationName = (selectedCity?.naam)!
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -16,8 +16,8 @@ struct city:Decodable {
     let stad: String
     let postcode: String
     let over: String
-    let lat: String
-    let long: String
+    let lat: Double
+    let long: Double
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {

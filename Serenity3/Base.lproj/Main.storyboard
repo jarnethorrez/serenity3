@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="208"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XUw-Pt-Bcc" id="Blc-fK-Ib9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3WT-oo-itq">
@@ -73,7 +73,7 @@
                                 <rect key="frame" x="20" y="122" width="8" height="12"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kortrijk, Belgium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3g-27-3iJ">
-                                <rect key="frame" x="38" y="116.99999999999999" width="140" height="23.333333333333329"/>
+                                <rect key="frame" x="38" y="117.00000000000001" width="140" height="23.666666666666671"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vp-Jy-TgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-430" y="-296"/>
+            <point key="canvasLocation" x="-428" y="-269"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="llQ-mW-TUR">
@@ -220,6 +220,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3y-L9-2qb">
                                                 <rect key="frame" x="39.666666666666657" y="470" width="335" height="50"/>
                                                 <state key="normal" image="btn"/>
+                                                <connections>
+                                                    <action selector="openInMapsTapped:" destination="SYA-UN-5zc" eventType="touchUpInside" id="nxf-ap-RAK"/>
+                                                    <segue destination="4tr-KX-LcN" kind="show" identifier="toMap" id="HnN-lZ-d4D"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locatie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3As-aH-Cf0">
                                                 <rect key="frame" x="20" y="228" width="59" height="23.333333333333343"/>
@@ -266,6 +270,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="QQY-Ay-iFV" secondAttribute="bottom" constant="672" id="AJS-Fd-i9H"/>
+                                    <constraint firstItem="QQY-Ay-iFV" firstAttribute="width" secondItem="xbG-3y-Lgy" secondAttribute="width" id="d2M-zV-3UR"/>
                                     <constraint firstItem="QQY-Ay-iFV" firstAttribute="leading" secondItem="xbG-3y-Lgy" secondAttribute="leading" id="dyo-jo-Xuy"/>
                                     <constraint firstAttribute="trailing" secondItem="QQY-Ay-iFV" secondAttribute="trailing" id="eDd-lj-TKq"/>
                                     <constraint firstItem="QQY-Ay-iFV" firstAttribute="top" secondItem="xbG-3y-Lgy" secondAttribute="top" id="iYf-eB-9Rd"/>
@@ -277,6 +282,7 @@
                             <constraint firstItem="QQY-Ay-iFV" firstAttribute="width" secondItem="42R-c1-Sej" secondAttribute="width" id="KvO-ah-cRG"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xbG-3y-Lgy" secondAttribute="bottom" id="V6O-XS-tlb"/>
                             <constraint firstItem="xbG-3y-Lgy" firstAttribute="leading" secondItem="42R-c1-Sej" secondAttribute="leading" id="ZeR-hu-yMT"/>
+                            <constraint firstItem="xbG-3y-Lgy" firstAttribute="width" secondItem="42R-c1-Sej" secondAttribute="width" id="gNR-Kb-M85"/>
                             <constraint firstItem="QQY-Ay-iFV" firstAttribute="height" secondItem="42R-c1-Sej" secondAttribute="height" id="iW9-04-4XD"/>
                             <constraint firstItem="xbG-3y-Lgy" firstAttribute="top" secondItem="Pqm-Px-set" secondAttribute="top" id="vVp-ue-9HL"/>
                             <constraint firstItem="xbG-3y-Lgy" firstAttribute="trailing" secondItem="Pqm-Px-set" secondAttribute="trailing" id="wq0-0f-E92"/>
@@ -296,6 +302,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTN-dc-Gel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1292" y="-269"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="3sm-az-1N2">
+            <objects>
+                <viewController id="4tr-KX-LcN" customClass="MapViewController" customModule="Serenity3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yos-Eu-uyS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qmI-Na-1R9">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qmI-Na-1R9" firstAttribute="top" secondItem="YTl-hO-QR5" secondAttribute="top" id="AGc-en-YVx"/>
+                            <constraint firstItem="YTl-hO-QR5" firstAttribute="bottom" secondItem="qmI-Na-1R9" secondAttribute="bottom" id="J9h-dc-DJC"/>
+                            <constraint firstItem="YTl-hO-QR5" firstAttribute="trailing" secondItem="qmI-Na-1R9" secondAttribute="trailing" id="O0V-Kw-9yK"/>
+                            <constraint firstItem="qmI-Na-1R9" firstAttribute="leading" secondItem="YTl-hO-QR5" secondAttribute="leading" id="Pd2-Bz-rdQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YTl-hO-QR5"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="qmI-Na-1R9" id="ome-th-sME"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9s-w3-XRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084.057971014493" y="-269.02173913043481"/>
         </scene>
     </scenes>
     <resources>
