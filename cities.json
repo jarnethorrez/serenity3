@@ -40,4 +40,15 @@
         "long": 3.2711068
     },
     
+    "4": {
+        "naam": "Citadel Park",
+        "locatie": "Citadelpark",
+        "adres": "Citadelpark",
+        "stad": "Gent",
+        "postcode": "9000",
+        "over": "Het Citadelpark is een park in de Belgische stad Gent. Het ligt in het stadscentrum op een heuvelkam tussen Schelde en Leie. Dit stadspark werd aangelegd in 1875 op de plaats waar eerder de Hollandse citadel van Gent stond, gebouwd tussen 1819 en 1831. De gronden werden in 1870-1871 aangekocht door de toenmalige burgemeester Charles de Kerchove de Denterghem. De citadel, een van de grootste en modernste van zijn tijd in Europa en later gebruikt als infanterie- en artilleriekazerne, bleef functioneren tot 1870. ",
+        "lat": 51.0374558,
+        "long": 3.7192785
+    },
+    
 }

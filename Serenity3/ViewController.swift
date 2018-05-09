@@ -27,6 +27,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     var cities: [String: city] = [:]
+    var currentCity:String?
+    var filteredCities: [String: city] = [:]
     var selectedIndex = 0;
     let locationManager = CLLocationManager()
     
@@ -35,11 +37,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        loadJson()
         locationTable.delegate = self
         locationTable.dataSource = self
+        loadJson()
         
         self.getUserLocation()
+        
     }
     
     func getUserLocation() {
@@ -47,6 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -70,6 +74,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func displayLocationInfo(_ placemark: CLPlacemark?) {
         let location = "\(placemark!.locality!), \(placemark!.country!)"
         
+        currentCity = placemark!.locality!
+        
         locationLabel.text = location
         
     }
@@ -82,6 +88,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         do {
             let data = try Data(contentsOf: url)
             cities = try JSONDecoder().decode([String: city].self, from: data)
+            
+            cities.forEach {
+                city in
+                if (city.value.stad == "kortrijk") {
+                    filteredCities[city.key] = city.value
+                }
+            }
+            
+            print(filteredCities.count)
         } catch {
             print(error)
         }
