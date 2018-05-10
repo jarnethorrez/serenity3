@@ -19,7 +19,7 @@
 		B35CFC1F2094BEFE009C3D6C /* avenirnext-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B35CFC1D2094BEFE009C3D6C /* avenirnext-medium.ttf */; };
 		B35CFC212095FA10009C3D6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CFC202095FA10009C3D6C /* DetailViewController.swift */; };
 		B3A34E4E20A3389B000DB656 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A34E4D20A3389B000DB656 /* MapViewController.swift */; };
-		B3E00F3920A4361D00DF1099 /* supportedCitiesList.json in Resources */ = {isa = PBXBuildFile; fileRef = B3E00F3820A4361D00DF1099 /* supportedCitiesList.json */; };
+		B3E00F3B20A4399700DF1099 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E00F3A20A4399700DF1099 /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		B35CFC1D2094BEFE009C3D6C /* avenirnext-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "avenirnext-medium.ttf"; sourceTree = "<group>"; };
 		B35CFC202095FA10009C3D6C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B3A34E4D20A3389B000DB656 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		B3E00F3820A4361D00DF1099 /* supportedCitiesList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = supportedCitiesList.json; sourceTree = "<group>"; };
+		B3E00F3A20A4399700DF1099 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,6 @@
 			children = (
 				B35CFBE32094A87B009C3D6C /* Serenity3 */,
 				B35CFBE22094A87B009C3D6C /* Products */,
-				B3E00F3820A4361D00DF1099 /* supportedCitiesList.json */,
 				B35CFBF62094A8B2009C3D6C /* cities.json */,
 				B306FD0F209C8342002CECA8 /* Frameworks */,
 			);
@@ -86,6 +85,7 @@
 				B35CFBE42094A87B009C3D6C /* AppDelegate.swift */,
 				B35CFBE62094A87B009C3D6C /* ViewController.swift */,
 				B35CFBE82094A87B009C3D6C /* Main.storyboard */,
+				B3E00F3A20A4399700DF1099 /* PickerViewController.swift */,
 				B3A34E4D20A3389B000DB656 /* MapViewController.swift */,
 				B35CFC202095FA10009C3D6C /* DetailViewController.swift */,
 				B35CFC182094B339009C3D6C /* locationTableViewCell.swift */,
@@ -168,7 +168,6 @@
 				B35CFBEF2094A87B009C3D6C /* LaunchScreen.storyboard in Resources */,
 				B35CFC1E2094BEFE009C3D6C /* avenirnext-bold.ttf in Resources */,
 				B35CFBEC2094A87B009C3D6C /* Assets.xcassets in Resources */,
-				B3E00F3920A4361D00DF1099 /* supportedCitiesList.json in Resources */,
 				B35CFBEA2094A87B009C3D6C /* Main.storyboard in Resources */,
 				B35CFC1F2094BEFE009C3D6C /* avenirnext-medium.ttf in Resources */,
 			);
@@ -181,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E00F3B20A4399700DF1099 /* PickerViewController.swift in Sources */,
 				B35CFBE72094A87B009C3D6C /* ViewController.swift in Sources */,
 				B35CFBE52094A87B009C3D6C /* AppDelegate.swift in Sources */,
 				B35CFC192094B339009C3D6C /* locationTableViewCell.swift in Sources */,
