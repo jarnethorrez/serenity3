@@ -35,12 +35,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         locationTable.delegate = self
         locationTable.dataSource = self
-        loadJson()
         
         if (UserDefaults.standard.string(forKey: "currentCity") != nil ) {
             currentCity = UserDefaults.standard.string(forKey: "currentCity")!
@@ -49,19 +49,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 locationLabel.text = currentCity
             }
             
+            loadJson()
+            
         } else {
             self.getUserLocation()
+            loadJson()
         }
         
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if (UserDefaults.standard.string(forKey: "currentCity")! != currentCity) {
-            currentCity = UserDefaults.standard.string(forKey: "currentCity")
-            locationLabel.text = currentCity
-            self.filter(filterOn: currentCity!)
-            locationTable.reloadData()
+        if (UserDefaults.standard.string(forKey: "currentCity") != nil) {
+            if (UserDefaults.standard.string(forKey: "currentCity")! != currentCity) {
+                currentCity = UserDefaults.standard.string(forKey: "currentCity")
+                locationLabel.text = currentCity
+                self.filter(filterOn: currentCity!)
+                locationTable.reloadData()
+            }
         }
     }
     
@@ -107,7 +112,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let data = try Data(contentsOf: url)
             cities = try JSONDecoder().decode([String: city].self, from: data)
             
-            self.filter(filterOn: "Gent");
+            if (currentCity != nil) {
+                self.filter(filterOn: currentCity!);
+            } else {
+                
+                let alert = UIAlertController(title: "Error", message: "You're current location is not supported. Please select a supported location by editting your current location.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+            }
             
             locationTable.reloadData()
         } catch {
