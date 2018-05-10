@@ -11,6 +11,7 @@ import UIKit
 class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var pickerView: UIPickerView!
+    var selectedCity:String?
     
     let supportedCities = ["Kortrijk", "Gent"]
     
@@ -27,7 +28,14 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
+        selectedCity = supportedCities[row]
+    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        if( selectedCity != nil) {
+            print(selectedCity!)
+            UserDefaults.standard.setValue(selectedCity, forKey: "currentCity")
+        }
     }
     
 
@@ -35,22 +43,12 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        selectedCity = supportedCities[0]
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

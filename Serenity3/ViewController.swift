@@ -42,8 +42,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         locationTable.dataSource = self
         loadJson()
         
-        self.getUserLocation()
+        if (UserDefaults.standard.string(forKey: "currentCity") != nil ) {
+            currentCity = UserDefaults.standard.string(forKey: "currentCity")!
+            
+            if (locationLabel.text != currentCity) {
+                locationLabel.text = currentCity
+            }
+            
+        } else {
+            self.getUserLocation()
+        }
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (UserDefaults.standard.string(forKey: "currentCity")! != currentCity) {
+            currentCity = UserDefaults.standard.string(forKey: "currentCity")
+            locationLabel.text = currentCity
+        }
     }
     
     func getUserLocation() {
@@ -92,7 +109,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             cities.forEach {
                 city in
-                if (city.value.stad == "Gent") {
+                if (city.value.stad == "Kortrijk") {
                     filteredCities[city.key] = city.value
                 }
             }
