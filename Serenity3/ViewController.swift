@@ -60,6 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if (UserDefaults.standard.string(forKey: "currentCity")! != currentCity) {
             currentCity = UserDefaults.standard.string(forKey: "currentCity")
             locationLabel.text = currentCity
+            self.filter(filterOn: currentCity!)
+            locationTable.reloadData()
         }
     }
     
@@ -90,11 +92,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func displayLocationInfo(_ placemark: CLPlacemark?) {
-        let location = "\(placemark!.locality!), \(placemark!.country!)"
         
         currentCity = placemark!.locality!
-        
-        locationLabel.text = location
+        locationLabel.text = currentCity
         
     }
     
@@ -107,17 +107,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let data = try Data(contentsOf: url)
             cities = try JSONDecoder().decode([String: city].self, from: data)
             
-            cities.forEach {
-                city in
-                if (city.value.stad == "Kortrijk") {
-                    filteredCities[city.key] = city.value
-                }
-            }
+            self.filter(filterOn: "Gent");
             
-            cities = filteredCities
             locationTable.reloadData()
         } catch {
             print(error)
+        }
+    }
+    
+    func filter(filterOn: String) {
+        
+        filteredCities.removeAll()
+        
+        cities.forEach {
+            city in
+            if (city.value.stad == filterOn) {
+                filteredCities[city.key] = city.value
+            }
         }
     }
 
@@ -132,7 +138,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cities.count
+        return filteredCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -140,15 +146,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var cityKeys = [Int]();
         
-        cities.forEach {
+        filteredCities.forEach {
             city in
             cityKeys.append( Int(city.key)! )
         }
         
-        print(cityKeys[indexPath.row])
-        
         cell.locationImage.image = UIImage(named: "\(cityKeys[indexPath.row])")
-        cell.locationName.text = cities["\(cityKeys[indexPath.row])"]?.naam
+        cell.locationName.text = filteredCities["\(cityKeys[indexPath.row])"]?.naam
         return cell
     }
     
@@ -157,14 +161,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             var cityKeys = [Int]();
             
-            cities.forEach {
+            filteredCities.forEach {
                 city in
                 cityKeys.append( Int(city.key)! )
             }
             
             let detailVC = segue.destination as!  DetailViewController
             selectedIndex = (locationTable.indexPathForSelectedRow?.row)!
-            detailVC.selectedCity = cities["\(cityKeys[selectedIndex])"]!
+            detailVC.selectedCity = filteredCities["\(cityKeys[selectedIndex])"]!
             detailVC.id = locationTable.indexPathForSelectedRow?.row
         }
     }

@@ -33,7 +33,6 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     override func willMove(toParentViewController parent: UIViewController?) {
         if( selectedCity != nil) {
-            print(selectedCity!)
             UserDefaults.standard.setValue(selectedCity, forKey: "currentCity")
         }
     }
