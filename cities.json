@@ -68,4 +68,54 @@
         "long": 3.6846297
     },
     
+    "6": {
+        "naam": "Vinderhoutse Bossen",
+        "imageId": "6",
+        "locatie": "Natuurpunt Gent",
+        "adres": "Driepikkelstraat 34",
+        "stad": "Gent",
+        "postcode": "9030",
+        "over": "De Vinderhoutse Bossen liggen in Gent (Drongen en Mariakerke) en Lovendegem (Vinderhoute). Het is een gebied van bijna 640 hectare tussen de Brugse Vaart, de Beekstraat – Boskeetstraat, de Gavergrachtstraat en de dorpskern van Vinderhoute. De Vlaamse overheid trekt de realisatie van deze groenpool. De Stad Gent engageert zich vooral voor de inrichting van het portaal De Campagne. Ook de provincie Oost-Vlaanderen en de gemeente Lovendegem werken mee.",
+        "lat": 51.0667982,
+        "long": 3.6817945
+    },
+    
+    "7": {
+        "naam": "Parkbos",
+        "imageId": "7",
+        "locatie": "Parkbos",
+        "adres": "Wallekensstraat",
+        "stad": "Gent",
+        "postcode": "9030",
+        "over": "Het Parkbos strekt zich uit over Gent (Zwijnaarde en Sint-Denijs-Westrem), De Pinte en Sint-Martens-Latem. Het is het gebied van bijna 1200 hectare tussen de Ringvaart, de Kortrijksesteenweg, de autosnelweg E17 en de woonkern van De Pinte. De Stad Gent realiseert maar een stukje van dit project. De Vlaamse overheid is de grote trekker. Ook de Provincie Oost-Vlaanderen en de buurgemeenten De Pinte en Sint-Martens-Latem werken mee. De aanleg van het Parkbos gebeurt gefaseerd tot 2020.",
+        "lat": 51.0138935,
+        "long": 3.6582809
+    },
+    
+    "8": {
+        "naam": "Bisschoppenhof",
+        "imageId": "8",
+        "locatie": "Deurne-Noord",
+        "adres": "Bisschoppenhoflaan",
+        "stad": "Antwerpen",
+        "postcode": "2000",
+        "over": "Het kasteel Bisschoppenhof wordt gebruikt door Foodj, een opleidings- en tewerkstellingsproject voor chef-koks. U kan hier terecht voor een hapje en een drankje. Er worden soms evenementen georganiseerd in samenwerking met het district Deurne en Stadsmakers, zoals een buurtpicknick op het plein voor het kasteel. Er is voor de kinderen ook een speeltuin in het park.",
+        "lat": 51.2313558,
+        "long": 4.4602481
+    },
+    
+    "9": {
+        "naam": "Den Botaniek",
+        "imageId": "9",
+        "locatie": "Plantentuin (Den Botaniek)",
+        "adres": "Leopoldstraat 24",
+        "stad": "Antwerpen",
+        "postcode": "2000",
+        "over": "Den Botaniek staat alle seizoenen in bloei. Nergens anders in Antwerpen vind je zoveel kruiden- en plantensoorten bij elkaar. Flanerend over de slingerende paadjes langs de bloemenperken vergeet u dadelijk de drukke stad, terwijl ze toch vlakbij is.",
+        "lat": 51.2313558,
+        "long": 4.4602481
+    },
+    
+    
+    
 }

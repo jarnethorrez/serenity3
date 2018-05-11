@@ -13,7 +13,7 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet var pickerView: UIPickerView!
     var selectedCity:String?
     
-    let supportedCities = ["Kortrijk", "Gent"]
+    let supportedCities = ["Kortrijk", "Gent", "Antwerpen"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
