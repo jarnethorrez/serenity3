@@ -56,4 +56,16 @@
         "long": 3.7192785
     },
     
+    "5": {
+        "naam": "Blaarmeersen",
+        "imageId": "5",
+        "locatie": "Blaarmeersen",
+        "adres": "Blaarmeersen",
+        "stad": "Gent",
+        "postcode": "9000",
+        "over": "Het Sport- en Recreatiepark Blaarmeersen is een groene parel aan de Gentse Watersportbaan. Vlak bij het historisch stadscentrum van Gent en goed bereikbaar vanuit alle uithoeken van Vlaanderen, is dit park een oase van rust en een baken van sportiviteit. Met zijn grote vijver en ontelbare sport- en recreatiemogelijkheden staat de Blaarmeersen garant voor puur plezier.",
+        "lat": 51.043261,
+        "long": 3.6846297
+    },
+    
 }

@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
 
         self.navigationItem.backBarButtonItem?.title = "Back"
         
-        locationImage.image = UIImage(named: "\(String(describing: id!))_big")
+        locationImage.image = UIImage(named: "\(selectedCity!.imageId)_big")
         locationName.text = selectedCity!.naam
         location.text = selectedCity!.locatie
         locationAdres.text = "\(selectedCity!.postcode) \(selectedCity!.stad)"
